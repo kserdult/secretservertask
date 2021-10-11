@@ -23,7 +23,7 @@
     <main>
         <h1>Secret shared!</h1>
         <button onclick="document.location='/'">Home page</button>
-        <p>Thanks for sharing your secret. You can share it with this link: </p>
+        <p>Thanks for sharing your secret. You can share it with this id: </p>
             <?php
             function rndString(){
                 return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(10/strlen($x)) )),1, 10);
@@ -35,7 +35,7 @@
                 echo 'TTL: ' . $_POST["ttl"] . '<br />';
                 $post = new Controller();
                 $post-> postSecret($_POST["secret"], $_POST["expview"], $_POST["ttl"], $hash);
-                echo 'Valami: ' . $post-> deleteSecret();
+                //echo 'Valami: ' . $post-> deleteSecret();
             ?>
     </main>
 </body>
