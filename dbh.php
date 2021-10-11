@@ -26,8 +26,8 @@
         $pdo = new PDO($dsn, $this->user, $this->pwd);
         //$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
         } catch(PDOException $e)
-        { echo $e->getMessage();
-            echo '<br />'.$dsn, $this->$user, $this->pwd;
+        {
+            echo $e->getMessage();
         }
         return $pdo;
     }
