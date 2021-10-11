@@ -3,10 +3,10 @@
     include 'dbh.php';
 
     class Model extends Dbh{
-        /*public function test(){
+        public function test(){
             $sql = "DELETE FROM secrets WHERE timestamp < CURRENT_TIMESTAMP - INTERVAL timetolive MINUTE OR viewstoexp <= 0;";
             $stmt = $this->connect()->query($sql);
-        }*/
+        }
         protected function getRandom(){
             $sql = "SELECT secret, hash FROM secrets ORDER BY RAND() LIMIT 1;";
             $stmt = $this->connect()->query($sql);
@@ -30,5 +30,5 @@
         }
     }
     $mod = new Model();
-    //$mod-> test();
+    $mod-> test();
 ?>
