@@ -29,7 +29,7 @@
                 return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(10/strlen($x)) )),1, 10);
             }
                 $hash = rndString();
-                echo $hash;
+                echo $hash '<br />';
                 echo 'Secret: ' . $_POST["secret"] . '<br />';
                 echo 'Expview: ' . $_POST["expview"] . '<br />';
                 echo 'TTL: ' . $_POST["ttl"] . '<br />';
