@@ -24,7 +24,7 @@
         //$dsn = 'mysql:dbname=' . $this->dbName .';host=' . $this->host;
         try {
         $pdo = new PDO($dsn, $this->user, $this->pwd);
-        //$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
+        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
         } catch(PDOException $e)
         {
             echo $e->getMessage();
