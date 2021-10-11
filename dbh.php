@@ -14,16 +14,21 @@
     */
 
     class Dbh {
-        private $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-        private $host ="localhost";
-        private $user =$cleardb_url["user"];
-        private $pwd =$cleardb_url["pass"];
-        private $dbName =substr($cleardb_url["path"],1);
+        private $host ="mysql.nethely.hu";
+        private $user ="secretservertask";
+        private $pwd ="AsdAsd12345";
+        private $dbName ="secretservertask";
     //Connecting to database
     protected function connect() {
-        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbName;
+        $dsn = 'mysql:host=' . $this->host . ';port=3306;dbname=' . $this->dbName;
+        //$dsn = 'mysql:dbname=' . $this->dbName .';host=' . $this->host;
+        try {
         $pdo = new PDO($dsn, $this->user, $this->pwd);
-        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
+        //$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
+        } catch(PDOException $e)
+        { echo $e->getMessage();
+            echo $dsn, $this->$user, $this->pwd;
+        }
         return $pdo;
     }
 }
