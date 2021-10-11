@@ -14,10 +14,10 @@
     */
 
     class Dbh {
-        private $host ="mysql.nethely.hu";
-        private $user ="secretservertask";
-        private $pwd ="AsdAsd12345";
-        private $dbName ="secretservertask";
+        private $host ="eu-cdbr-west-01.cleardb.com";
+        private $user ="bb54426b107560";
+        private $pwd ="6ca5230e";
+        private $dbName ="heroku_eff92da004bcfc7";
     //Connecting to database
     protected function connect() {
         $dsn = 'mysql:host=' . $this->host . ';port=3306;dbname=' . $this->dbName;
@@ -27,7 +27,7 @@
         //$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
         } catch(PDOException $e)
         { echo $e->getMessage();
-            echo $dsn, $this->$user, $this->pwd;
+            echo '<br />'.$dsn, $this->$user, $this->pwd;
         }
         return $pdo;
     }
