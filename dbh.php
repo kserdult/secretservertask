@@ -20,7 +20,7 @@
         private $dbName ="heroku_eff92da004bcfc7";
     //Connecting to database
     protected function connect() {
-        $dsn = 'mysql:host=' . $this->host . ';port=3306;dbname=' . $this->dbName;
+        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbName;
         //$dsn = 'mysql:dbname=' . $this->dbName .';host=' . $this->host;
         try {
         $pdo = new PDO($dsn, $this->user, $this->pwd);
