@@ -14,10 +14,10 @@
     */
 
     class Dbh {
-        private $host ="eu-cdbr-west-01.cleardb.com";
-        private $user ="bb54426b107560";
-        private $pwd ="6ca5230e";
-        private $dbName ="heroku_eff92da004bcfc7";
+        private $host ="*******";
+        private $user ="*******";
+        private $pwd ="********";
+        private $dbName ="******";
     //Connecting to database
     protected function connect() {
         $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbName;
